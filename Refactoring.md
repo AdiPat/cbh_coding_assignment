@@ -9,3 +9,12 @@ You've been asked to refactor the function `deterministicPartitionKey` in [`dpk.
 You will be graded on the exhaustiveness and quality of your unit tests, the depth of your refactor, and the level of insight into your thought process provided by the written explanation.
 
 ## Your Explanation Here
+
+ - Added a seperate method `getInitialCandidateValue()` to set initial value of candidate. The method automatically adds a description to that specific block of code. We know what it is doing.
+ - In `getInitialCandidateValue()` we remove the nested if-else and make the method terminate early if event doesn't exist. Making a method return early if a particular condition is met is a good development practise.
+ - With just 2 if statements that have a return, readability is improved because the termination of the method is clearly highlighted at the start itself.
+ - Added a seperate method to normalize candidate value called `normalizeCandidateValue()`.
+ - In this method, we again remove the nested if statements to improve readability. 
+ - Adding 2 new methods is a cleaner and more readable approach because we've adopted 'seperation of concerns' paradigm.
+ - Each method does 1 thing only and as it is within 10 lines, it's more readable and concise.
+ - As a result of removing the nested conditions, the code is easier to trace. As a result of adding the new methods, the code is self descriptive in nature and tells the developer what it is doing.
